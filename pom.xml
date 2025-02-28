@@ -14,14 +14,25 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/${project.groupId}/${project.artifactId}</url>
+			<url>https://maven.pkg.github.com/ssd2658/am-spring-parent</url>
 		</repository>
 		<snapshotRepository>
 			<id>github</id>
 			<name>GitHub Packages</name>
-			<url>https://maven.pkg.github.com/${project.groupId}/${project.artifactId}</url>
+			<url>https://maven.pkg.github.com/ssd2658/am-spring-parent</url>
 		</snapshotRepository>
 	</distributionManagement>
+
+	<repositories>
+		<repository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/ssd2658/am-spring-parent</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 
     <url/>
 	<licenses>
