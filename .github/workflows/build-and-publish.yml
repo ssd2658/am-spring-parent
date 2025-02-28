@@ -26,7 +26,7 @@ jobs:
         cache: maven
         server-id: github
         server-username: ${{ github.actor }}
-        server-password: ${{ secrets.GH_TOKEN }}
+        server-password: ${{ secrets.GITHUB_TOKEN }}
         
     - name: Build with Maven
       run: mvn -B clean install
@@ -36,4 +36,4 @@ jobs:
       if: github.event_name == 'release' || (github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'))
       run: mvn -B deploy
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
